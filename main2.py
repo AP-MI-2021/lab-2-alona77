@@ -34,7 +34,7 @@ def get_n_choose_k(n,k):
 
 def is_prime(x):
     if x <= 1:
-        print("nu este prim")
+        False
     else:
         for i in range(2,x-1):
             if x % i == 0:
@@ -57,7 +57,6 @@ def is_superprime(n):
     for i in range (1,c+1):
         prefix = copy // puterea
         puterea = puterea // 10
-        print(prefix)
         if is_prime(prefix)!=True:
             return False
     return True
@@ -110,7 +109,7 @@ def main():
                print("Numarul", n, "este superprim")
             else :
                 print("Numarul", n, "nu ete superprim")
-                
+
         elif opt == 4:
              x =str(input("introduceti numarul: "))
              print(get_base_2(x))
@@ -143,7 +142,6 @@ def test_get_base_2():
     assert get_base_2(75) == 1001011
     assert get_base_2(12) == 1100 
     assert get_base_2(2) == 10
-
 
 if __name__ == '__main__':
   main()
